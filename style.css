@@ -1,3 +1,25 @@
+/*
+===============
+Fonts
+===============
+*/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap');
+
+/*
+===============
+Variables
+===============
+*/
+:root {
+    --clr-primary-1: #953f00;
+    --clr-grey-1: hsl(209, 61%, 16%);
+    --clr-grey-5: hsl(210, 22%, 49%);
+    --clr-primary-8: #fb964d;
+    --clr-primary-5: #f96900;
+    --ff-primary: 'Roboto', sans-serif;
+    --ff-secondary: 'Open Sans', sans-serif;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,14 +27,75 @@
     text-align: center;
 }
 
+/*
+=============
+Mobile First
+=============
+*/
+h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 1.25rem;
+  }
+  h4 {
+    font-size: 0.875rem;
+  }
+  p {
+    margin-bottom: 1.25rem;
+    color: var(--clr-grey-5);
+  }
+
+@media  screen and (min-width: 769px) {
+    h1 {
+        font-size: 4rem;
+      }
+      h2 {
+        font-size: 2.5rem;
+      }
+      h3 {
+        font-size: 1.75rem;
+      }
+      h4 {
+        font-size: 1rem;
+      }
+      body {
+        font-size: 1rem;
+      }
+      h1,
+      h2,
+      h3,
+      h4 {
+        line-height: 1;
+      }
+}
+
+.section-center {
+    width: 90vw;
+    margin: 0 auto;
+    max-width: 40rem;
+    margin-top: 5rem;
+    text-align: center;
+  }
+
+body {
+    background-color: #fef0e6;
+    font-family: var(--ff-secondary);
+    line-height: 1.5rem;
+    color: var(--clr-grey-1);
+}
+
 section {
     margin: 5rem;
 }
 
 h3 {
-    color: #953f00;
+    color: var(--clr-primary-1);
     font-size: 1.25rem;
-    font-family: 'Moon Dance', cursive;
+    font-family: var(--ff-primary);
 }
 
 form {
@@ -21,12 +104,21 @@ form {
 }
 
 label {
-    color: #953f00;
+    color: var(--clr-primary-1);
     text-transform: capitalize;
+    letter-spacing: 0.25rem;
+    font-size: 1.25rem;
 }
 
 #amount {
-    width: 50px;
+    width: 4rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 1rem;
+    border: none;
+    font-size: 1.25rem;
+    box-shadow: var(--clr-primary-1);
+    margin: 0 0.5rem;
+    text-align: left;
 }
 
 .btn {
@@ -39,5 +131,16 @@ label {
     background-color: #f96900;
     cursor: pointer;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-    transition: var(all 0.3s linear);
+    transition: all 0.3s linear;
+}
+.btn:hover {
+    color: var(--clr-primary-5);
+    background: var(--clr-primary-8);
+    border-color: var(--clr-primary-8);
+}
+
+p {
+    margin: 2rem;
+    color: var(--clr-grey-5);
+    font-family: var(--ff-primary);
 }
